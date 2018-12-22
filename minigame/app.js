@@ -1,15 +1,8 @@
-// emojify returns the corresponding emoji image
-function emojify(name) {
-    var out = `<img src="emojis/` + name + `.png">`;
-    return out;
-}
 
 // handles all vue.js functions
 new Vue({
     el: '#app',
     data: {
-        wizard: emojify("wizard"),
-        wolf: emojify("sirius--dog"),
         playerHealth: 100,
         monsterHealth: 100,
         gameIsRunning: false,
@@ -96,12 +89,6 @@ new Vue({
                 return true;
             }
             return false;
-        },
-        breathe: function () {
-            return (
-                this.wizard = "breathe--man",
-                this.wolf = "breathe--dog"
-            )
         }
     }
 });
